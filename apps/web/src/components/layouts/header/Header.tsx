@@ -1,6 +1,7 @@
 import HeaderActions from "./HeaderActions"
 import Logo from "./Logo"
 import SearchBar from "./SearchBar"
+import Navigation from "../navigation";
 function Header() {
   return (
     <header className="border-b bg-white">
@@ -9,6 +10,7 @@ function Header() {
         <SearchBar />
         <Logo />
       </div>
+      <Navigation />
       
     </header>
   );

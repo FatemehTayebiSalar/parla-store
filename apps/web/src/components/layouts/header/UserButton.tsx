@@ -3,7 +3,7 @@ import { IconButton } from "../../ui/icon-button";
 function UserButton() {
   return (
     <IconButton>
-      <User />
+      <User size={22} />
     </IconButton>
   );
 }
