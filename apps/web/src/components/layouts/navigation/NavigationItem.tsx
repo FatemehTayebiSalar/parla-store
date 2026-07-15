@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 type NavigationItemProps = {
   title: string;
   href: string;
@@ -6,12 +8,12 @@ type NavigationItemProps = {
 function NavigationItem({title, href}: NavigationItemProps){
     console.log({ title, href });
     return (
-        <a
-            href = {href}
+        <Link
+            to = {href}
             className="text-sm font-medium text-gray-700 transition-colors hover:text-b"
         >
             {title}
-        </a>
+        </Link>
         
     )
 }
