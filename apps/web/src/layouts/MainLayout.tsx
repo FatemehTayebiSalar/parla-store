@@ -1,15 +1,13 @@
 import { Header } from "../components/layouts/header";
-type MainLayoutProps = {
-  children: React.ReactNode;
-};
+import { Outlet } from "react-router-dom";
 
-function MainLayout({ children }: MainLayoutProps) {
+function MainLayout() {
   return (
     <>
-    <Header />
-    <main>
-        {children}
-    </main>
+      <Header />
+      <main>
+        <Outlet />
+      </main>
     </>
   );
 }

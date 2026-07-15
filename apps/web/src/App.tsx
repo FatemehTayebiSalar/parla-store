@@ -1,16 +1,23 @@
 import MainLayout from "./layouts/MainLayout";
+import HomePage from "./pages/HomePage";
+import ProductsPage from "./pages/ProductsPage";
+import BrandsPage from "./pages/BrandsPage";
+import ContactPage from "./pages/ContactPage";
+import OffersPage from "./pages/OffersPage";
+import { Route, Routes } from "react-router-dom";
 
 
 function App() {
   return (
-    <MainLayout>
-      <div className="flex items-center justify-center h-screen">
-        <h1 className="text-5xl font-bold text-blue-600">
-          Parla Store 🚀
-          </h1>
-      </div>
-      
-    </MainLayout>
+   <Routes> 
+      <Route path = "/" element = {<MainLayout/>}>
+        <Route index element = {<HomePage/>} />
+        <Route path = "/products" element = {<ProductsPage/>} /> 
+        <Route path = "/brands" element = {<BrandsPage/>} /> 
+        <Route path = "/contact" element = {<ContactPage/>} /> 
+        <Route path = "/offers" element = {<OffersPage/>} /> 
+      </Route> 
+    </Routes>
   );
 }
 
