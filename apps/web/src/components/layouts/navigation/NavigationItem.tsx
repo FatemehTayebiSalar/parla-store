@@ -6,11 +6,10 @@ type NavigationItemProps = {
 };
 
 function NavigationItem({title, href}: NavigationItemProps){
-    console.log({ title, href });
     return (
         <Link
             to = {href}
-            className="text-sm font-medium text-gray-700 transition-colors hover:text-b"
+            className="text-sm font-medium text-gray-700 transition-colors hover:text-black"
         >
             {title}
         </Link>
