@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 type NavigationItemProps = {
   title: string;
@@ -7,12 +7,18 @@ type NavigationItemProps = {
 
 function NavigationItem({title, href}: NavigationItemProps){
     return (
-        <Link
+        <NavLink
             to = {href}
-            className="text-sm font-medium text-gray-700 transition-colors hover:text-black"
+            className={({ isActive }) =>
+                `text-sm font-medium transition-colors ${
+                    isActive
+                        ? "text-blue-600 font-semibold"
+                        : "text-gray-700 hover:text-blue-600"
+                }`
+            }
         >
             {title}
-        </Link>
+        </NavLink>
         
     )
 }
