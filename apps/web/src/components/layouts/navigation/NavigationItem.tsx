@@ -10,11 +10,16 @@ function NavigationItem({title, href}: NavigationItemProps){
         <NavLink
             to = {href}
             className={({ isActive }) =>
-                `text-sm font-medium transition-colors ${
-                    isActive
-                        ? "text-blue-600 font-semibold"
-                        : "text-gray-700 hover:text-blue-600"
-                }`
+                `
+                relative
+                text-[15px]
+                font-medium
+                text-slate-700
+                transition-colors
+                duration-200
+                hover:text-blue-700
+                ${isActive ? "text-blue-700" : ""}
+                `
             }
         >
             {title}

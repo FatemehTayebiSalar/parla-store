@@ -6,16 +6,22 @@ import Container from "../../common/Container";
 
 function Header() {
   return (
-    <header className="border-b bg-white">
+    <header className="border-b border-gray-100 bg-white shadow-sm px-8">
       <Container>
-        <div className="flex h-20 items-center justify-between">
-          <HeaderActions />
-          <SearchBar />
-          <Logo />
+        <div className="grid h-20 grid-cols-3 items-center">
+          <div className="flex justify-start">
+            <Logo />
+          </div>
+
+          <div className="flex justify-center">
+            <Navigation />
+          </div>
+
+          <div className="flex justify-end">
+            <HeaderActions />
+          </div>
         </div>
       </Container>
-
-      <Navigation />
     </header>
   );
 }

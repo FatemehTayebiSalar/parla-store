@@ -36,14 +36,17 @@ const navItems: NavigationItemType[] = [
 
 function Navigation() {
   return (
-    <nav className="flex items-center gap-6">
-      {navItems.map((item) => (
-        <NavigationItem
-          key={item.id}
-          title={item.title}
-          href={item.href}
-        />
-      ))}
+    <nav>
+      <ul className="flex flex-row-reverse items-center gap-8">
+        {navItems.map((item) => (
+          <li key={item.id}>
+            <NavigationItem
+              title={item.title}
+              href={item.href}
+            />
+          </li>
+        ))}
+      </ul>
     </nav>
   );
 }
