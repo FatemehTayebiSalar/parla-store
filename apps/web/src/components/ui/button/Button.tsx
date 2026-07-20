@@ -1,25 +1,28 @@
-type ButtonProps = {
-  children: React.ReactNode;
+import type { ButtonHTMLAttributes } from "react";
+
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: "primary" | "secondary";
 };
 
 function Button({
   children,
   variant = "primary",
+  className = "",
+  ...rest
 }: ButtonProps) {
   const baseClasses =
     "inline-flex items-center justify-center rounded-xl px-6 py-3 text-sm font-semibold transition-all duration-200";
 
   const variants = {
-    primary:
-      "bg-blue-700 text-white hover:bg-blue-800",
-
-    secondary:
-      "border border-slate-300 bg-white text-slate-700 hover:bg-slate-50",
+    primary: "bg-blue-700 text-white hover:bg-blue-800",
+    secondary: "border border-slate-300 bg-white text-slate-700 hover:bg-slate-50",
   };
 
   return (
-    <button className={`${baseClasses} ${variants[variant]}`}>
+    <button
+      className={`${baseClasses} ${variants[variant]} ${className}`}
+      {...rest}
+    >
       {children}
     </button>
   );

@@ -7,12 +7,13 @@ function HeroSection() {
     <section className="bg-white py-12 min-h-[620px]">
       <Container>
         <div className="flex flex-col items-center gap-12 lg:flex-row">
-            <div className="w-full lg:w-3/5 flex justify-end">
-                <HeroImage />
-            </div>
             <div className="w-full lg:w-2/5">
                 <HeroContent />
             </div>
+            <div className="w-full lg:w-3/5 flex justify-end">
+                <HeroImage />
+            </div>
+            
         </div>
       </Container>
     </section>
