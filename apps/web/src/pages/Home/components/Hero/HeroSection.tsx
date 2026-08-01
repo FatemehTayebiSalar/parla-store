@@ -1,4 +1,4 @@
-import Container from "../../../components/common/Container";
+import Container from "../../../../components/common/Container";
 import HeroContent from "./HeroContent";
 import HeroImage from "./HeroImage";
 
