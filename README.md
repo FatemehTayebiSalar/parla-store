@@ -50,7 +50,8 @@ This project is a personal learning project created to strengthen my practical s
 npm install
 npm run dev
 ```
-
 The frontend will be available at the local development URL provided by Vite.
-Backend
+
+### Backend
+
 Backend setup and instructions will be added as the server-side implementation is developed.
